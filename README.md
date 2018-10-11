@@ -4,6 +4,4 @@ This repository contains various libraries, tools and utilities with a permissiv
 
 **nanoFramework** is an implementation of the popular .NET Framework, but designed to work on constrained devices, like an STM32. With the sad demise of NETMF, arose a need to have an alternative so that .NET enthusiasts continue to build embedded systems using their favourite language - C#.
 
-### Class Documentation
-1. [nanoFramework.Companion.Core](https://sharmavishnu.github.io/nanoFramework.Companion.Core/index.html)
-2. [nanoFramework.Companion.Drivers](https://sharmavishnu.github.io/nanoFramework.Companion.Drivers/index.html)
+[Library Class Documentation](https://sharmavishnu.github.io/index.html)
