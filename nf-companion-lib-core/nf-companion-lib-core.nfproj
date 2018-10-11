@@ -42,6 +42,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Nuget\nanoFramework.Companion.Core.1.0.0-preview001.nupkg" />
+    <None Include="Nuget\nanoFramework.Companion.Core.1.0.0-preview001.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>nanoFramework.Companion.Drivers.Display</id>
+    <version>1.0.0-preview001</version>
+    <authors>Vishnu Sharma</authors>
+    <owners>vishnusharma</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/sharmavishnu/nf-companion/tree/master/nf-companion-lib-drivers-display</projectUrl>
+    <iconUrl>https://github.com/sharmavishnu/nf-companion/blob/master/home/images/nf-companion-logo-64x64.jpg?raw=true</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      nanoFramework companion library display drivers package. 
+      Contains drivers for popular displays used in embedded systems (e.g. OLED, TFT)
+    </description>
+    <releaseNotes>First preview release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>nanoFramework</tags>
+	  <packageTypes>
+        <packageType name="Dependency" />
+    </packageTypes>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="1.0.1-preview127" />
+			<dependency id="nanoFramework.Windows.Devices.I2c" version="1.0.0-preview200" />
+      <dependency id="nanoFramework.Companion.Core" version="1.0.0-preview001" />
+    </dependencies>
+  </metadata>
+  <files>
+  	<file src="../bin/debug/nanoFramework.Companion.Drivers.Display.dll" target="lib"/>
+	  <file src="../bin/debug/nanoFramework.Companion.Drivers.Display.pdb" target="lib"/>
+	  <file src="../bin/debug/nanoFramework.Companion.Drivers.Display.pdbx" target="lib"/>
+	  <file src="../bin/debug/nanoFramework.Companion.Drivers.Display.pe" target="lib"/>
+  </files>
+</package>
