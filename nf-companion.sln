@@ -13,6 +13,8 @@ Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nf-companion-lib-drivers-di
 EndProject
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nf-companion-lib-drivers-memory", "nf-companion-lib-drivers-memory\nf-companion-lib-drivers-memory.nfproj", "{AA252C91-A6B9-4AF7-8A4E-72BBDFEEA164}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nf-companion-tools-fgen", "nf-companion-tools-fgen\nf-companion-tools-fgen.csproj", "{5518FBFE-573E-4BCC-9C56-6DD792196D4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{AA252C91-A6B9-4AF7-8A4E-72BBDFEEA164}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA252C91-A6B9-4AF7-8A4E-72BBDFEEA164}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AA252C91-A6B9-4AF7-8A4E-72BBDFEEA164}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5518FBFE-573E-4BCC-9C56-6DD792196D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5518FBFE-573E-4BCC-9C56-6DD792196D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5518FBFE-573E-4BCC-9C56-6DD792196D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5518FBFE-573E-4BCC-9C56-6DD792196D4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
