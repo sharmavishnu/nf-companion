@@ -1,0 +1,43 @@
+﻿/***************************************************
+Font Map Generator
+(c) 2018 Vishnu Sharma, vishnusharma.com, All rights reserved
+This file is distributed under MIT license (https://opensource.org/licenses/MIT)
+
+WARNING !!
+This file was generated using the Font Map Genertor tool.
+Any manual editing of this file may result in a situation
+where this file can no longer be recognized by the tool
+and associated elements. 
+****************************************************/
+using System;
+
+//7ede8a4c-223c-4389-a683-cb2c5de448d5
+//$$FONT_WIDTH_IN_PIXEL$$;$$FONT_HEIGHT_IN_PIXEL$$
+//7ede8a4c-223c-4389-a683-cb2c5de448d5
+
+namespace nanoFramework.Fonts
+{
+    /// <summary>
+    /// Represents a $$FONT_WIDTH_IN_PIXEL$$ X $$FONT_HEIGHT_IN_PIXEL$$ (W x H) pixel font object to be used with nanoFramework display device drivers.
+    /// </summary>
+    public class $$CLASS_NAME$$ : IPixelFont
+    {
+        private static readonly UInt32[] _charmap = {
+		//f3b635d2-e762-4110-b202-488f5b6ca5df
+            $$FONT_CHAR_MAP$$
+		//f3b635d2-e762-4110-b202-488f5b6ca5df
+        };
+		/// <summary>
+		/// Accessor for the LCD font height (in pixels)
+		/// </summary>
+		public byte Height { get { return $$FONT_HEIGHT_IN_PIXEL$$; } }
+        /// <summary>
+        /// Accessor for the LCD font width (in pixels)
+        /// </summary>
+        public byte Width { get { return $$FONT_WIDTH_IN_PIXEL$$; } }
+        /// <summary>
+        /// The character map
+        /// </summary>
+        public UInt32[] CharMap{ get { return _charmap;}}
+    }
+}

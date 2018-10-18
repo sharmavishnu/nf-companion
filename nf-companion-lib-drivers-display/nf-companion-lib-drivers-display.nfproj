@@ -19,6 +19,7 @@
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
     <Compile Include="IPixelFont.cs" />
+    <Compile Include="OLEDSSD1306_SPI.cs" />
     <Compile Include="OLEDSSD1306_I2C.cs" />
     <Compile Include="PixelFont7X9.cs" />
     <Compile Include="Symbols7X9.cs" />

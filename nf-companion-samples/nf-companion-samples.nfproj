@@ -18,6 +18,7 @@
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
+    <Compile Include="Display\OLEDSSD1306_SPI_Sample.cs" />
     <Compile Include="Display\OLEDSSD1306_I2C_Sample.cs" />
     <Compile Include="ISample.cs" />
     <Compile Include="Memory\24LC256_Sample.cs" />
@@ -36,11 +37,6 @@
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
-    <Reference Include="nanoFramework.Companion.Drivers.Display, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.Companion.Drivers.Display.1.0.0-preview001\lib\nanoFramework.Companion.Drivers.Display.dll</HintPath>
-      <Private>True</Private>
-      <SpecificVersion>True</SpecificVersion>
-    </Reference>
     <Reference Include="nanoFramework.Companion.Drivers.Memory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\nanoFramework.Companion.Drivers.Memory.1.0.0-preview001\lib\nanoFramework.Companion.Drivers.Memory.dll</HintPath>
       <Private>True</Private>
@@ -48,6 +44,16 @@
     </Reference>
     <Reference Include="nanoFramework.Companion.Drivers.Sensors, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\nanoFramework.Companion.Drivers.Sensors.1.0.0-preview001\lib\nanoFramework.Companion.Drivers.Sensors.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="nanoFramework.Runtime.Events, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Runtime.Events.1.0.0-preview228\lib\nanoFramework.Runtime.Events.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Windows.Devices.Gpio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Windows.Devices.Gpio.1.0.0-preview215\lib\Windows.Devices.Gpio.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
@@ -59,6 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nf-companion-lib-drivers-display\nf-companion-lib-drivers-display.nfproj" />
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
   <ProjectExtensions>

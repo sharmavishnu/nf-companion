@@ -320,6 +320,79 @@ namespace nanoFramework.Companion.Tools.OLEDFontGenerator
             }
         }
         /// <summary>
+        /// Export font file as an image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnExportToImage(object sender, EventArgs e)
+        {
+            if (_allPixelMaps == null || _allPixelMaps.Count == 0)
+            {
+                MessageBox.Show(this, "Nothing to export", "Pixel Font Generator", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            SaveFileDialog saveFile = new SaveFileDialog()
+            {
+                AddExtension = true,
+                CheckPathExists = true,
+                DefaultExt = ".bmp",
+                Filter = "Image Files|*.bmp",
+                OverwritePrompt = true,
+                RestoreDirectory = true,
+                ValidateNames = true
+            };
+                        
+            if(saveFile.ShowDialog(this) == DialogResult.OK)
+            {
+                try
+                {
+                    int totalItems = _allPixelMaps.Count;
+                    int fontHeight = _allPixelMaps[(char)' '].FontSize.Height;
+                    int fontWidth = _allPixelMaps[(char)' '].FontSize.Width;
+
+                    //create a new bitmap to hold all images                    
+                    int xPos = 0;
+                    int yPos = 0;
+                    int sqrt = (int)Math.Ceiling(Math.Sqrt(totalItems));
+                    int bmpHW = 50;//48x48 BMP with 2 pixel gutter width
+                    Bitmap container = new Bitmap(sqrt * bmpHW, sqrt * bmpHW);                    
+                    Graphics canvas = Graphics.FromImage(container);
+                    foreach (var c in _allPixelMaps.Keys)
+                    {                        
+                        //get each font pixel map and construct the font
+                        SingleCharInfoDisplay ciDisplay = _allPixelMaps[c];
+                        Bitmap fontImage = DrawFontPreviewBitmap(fontWidth, fontHeight, ciDisplay.FontPixelsMap, Color.Black, Color.WhiteSmoke);
+
+                        Bitmap fontContainer = new Bitmap(bmpHW - 2, bmpHW - 2);
+                        Graphics fcGraphics = Graphics.FromImage(fontContainer);
+                        fcGraphics.FillRectangle(Brushes.Black, 0, 0, fontContainer.Width, 15);
+                        fcGraphics.FillRectangle(Brushes.WhiteSmoke, 0,15, 48, 48-15);
+                        fcGraphics.DrawString(c + "", new Font("Arial", 8), Brushes.White, 20, 0);
+                        
+                        fcGraphics.DrawImage(fontImage , (fontContainer.Width - fontWidth) / 2 , (33 - fontHeight)/2 + 15 );
+
+                        canvas.DrawImage(fontContainer, xPos, yPos);
+
+                        xPos += bmpHW;
+                        if (xPos > container.Width)
+                        {
+                            xPos = 1; //reset to left
+                            yPos += bmpHW;
+                        }
+                        fontImage.Dispose();
+                        fontContainer.Dispose();
+                    }
+                    container.Save(saveFile.FileName);
+                    MessageBox.Show(this, "Font image exported successfully", "Pixel Font Generator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    container.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        /// <summary>
         /// Show about box
         /// </summary>
         /// <param name="sender"></param>
@@ -363,7 +436,7 @@ namespace nanoFramework.Companion.Tools.OLEDFontGenerator
             if (_previewPanel.BackgroundImage != null)
             {
                 _previewPanel.BackgroundImage.Dispose();
-                _previewPanel.BackgroundImage = null;
+                _previewPanel.BackgroundImage = DrawFontPreviewBitmap(ciDisplay.FontSize.Width , ciDisplay.FontSize.Height, ciDisplay.FontPixelsMap ,Color.Aqua , Color.Black);
             }
             SuspendLayout();
             _fontDesignPage.Controls.Add(ciDisplay);
@@ -396,28 +469,11 @@ namespace nanoFramework.Companion.Tools.OLEDFontGenerator
                     _previewPanel.BackgroundImage = null;
                 }
                 //refresh everytime...//TODO::improve
-                bmp = new Bitmap(ciDisplay.FontSize.Width + 1, ciDisplay.FontSize.Height + 1);
+                bmp = DrawFontPreviewBitmap(ciDisplay.FontSize.Width, ciDisplay.FontSize.Height, 
+                                        ciDisplay.FontPixelsMap, Color.Aqua,Color.Black); 
                 _previewPanel.BackgroundImage = (Image)bmp;
                 _previewPanel.BackgroundImageLayout = ImageLayout.Center;
-
-                int xpos = 0;
-                int ypos = 0;
                 
-                //Draw dots/pixels                
-                for(int idx=0;idx < ciDisplay.FontPixelsMap.Length; idx++)
-                {
-                    if (idx % ciDisplay.FontSize.Width == 0)
-                        xpos = 1;
-                    else
-                        xpos++;
-
-                    ypos = (int)(idx / ciDisplay.FontSize.Width) + 1;
-                    
-                    if (ciDisplay.FontPixelsMap[idx])
-                        bmp.SetPixel(xpos , ypos, Color.Aqua);
-                    else
-                        bmp.SetPixel(xpos, ypos, Color.Black);
-                }
                 _previewPanel.BackgroundImage = bmp;
                 _previewPanel.Update();
                 _previewPanel.Refresh();
@@ -438,6 +494,38 @@ namespace nanoFramework.Companion.Tools.OLEDFontGenerator
                 else if (c > '~')
                     break;
             }
+        }
+        /// <summary>
+        /// Draw a bitmap of the font based on the pixel bitmap
+        /// </summary>
+        /// <param name="fontWidth">Bitmap width</param>
+        /// <param name="fontHeight">Bitmap height</param>
+        /// <param name="fontPixelMap">The font pixel bitmap</param>
+        /// <returns>Bitmap</returns>
+        private Bitmap DrawFontPreviewBitmap(int fontWidth, int fontHeight,bool[] fontPixelMap, Color onPixel,Color offPixel)
+        {
+            //refresh everytime...//TODO::improve
+            Bitmap bmp = new Bitmap(fontWidth + 1, fontHeight + 1);
+
+            int xpos = 0;
+            int ypos = 0;
+
+            //Draw dots/pixels                
+            for (int idx = 0; idx < fontPixelMap.Length; idx++)
+            {
+                if (idx % fontWidth == 0)
+                    xpos = 1;
+                else
+                    xpos++;
+
+                ypos = (int)Math.Floor((decimal)(idx / fontWidth)) + 1;
+
+                if (fontPixelMap[idx])
+                    bmp.SetPixel(xpos, ypos, onPixel);
+                else
+                    bmp.SetPixel(xpos, ypos, offPixel);
+            }
+            return bmp;
         }
     }
 

@@ -36,6 +36,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this._aboutBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this._exitBtn = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this._asciiCodeCbx = new System.Windows.Forms.ComboBox();
@@ -56,6 +58,8 @@
             this.toolStripSeparator1,
             this._aboutBtn,
             this.toolStripSeparator2,
+            this.toolStripButton1,
+            this.toolStripSeparator3,
             this._exitBtn});
             this._formToolStrip.Location = new System.Drawing.Point(0, 0);
             this._formToolStrip.Name = "_formToolStrip";
@@ -111,6 +115,21 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::nanoFramework.Companion.Tools.OLEDFontGenerator.Properties.Resources.export_16;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Export as image";
+            this.toolStripButton1.Click += new System.EventHandler(this.OnExportToImage);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // _exitBtn
             // 
@@ -220,5 +239,7 @@
         private System.Windows.Forms.TabPage _fontDesignPage;
         private System.Windows.Forms.Panel _previewPanel;
         private System.Windows.Forms.Label _fontSizeLbl;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }

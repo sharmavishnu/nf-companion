@@ -104,20 +104,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="res\LCDFontClass.template" />
+    <None Include="Resources\LCDFontClass.template" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="res\app.ico" />
-    <Content Include="res\brick-30.ico" />
-    <Content Include="res\brick-30.png" />
-    <Content Include="res\exit-16.png" />
-    <Content Include="res\file-16.png" />
-    <Content Include="res\open-16.png" />
-    <Content Include="res\save-16.png" />
-    <Content Include="res\user-manual-16.png" />
+    <None Include="Resources\export-16.png" />
+    <None Include="Resources\brick-30.png" />
+    <None Include="Resources\exit-16.png" />
+    <None Include="Resources\file-16.png" />
+    <None Include="Resources\open-16.png" />
+    <None Include="Resources\save-16.png" />
+    <None Include="Resources\user-manual-16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
