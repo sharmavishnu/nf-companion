@@ -9,7 +9,8 @@ This repository contains various libraries, tools and utilities with a permissiv
 #### Supported Drivers
 1. HTU21D Temperature/Humidity Sensor
 2. 24LC256 EEPROM driver
-3. SSD1306 OLED Driver (128x32, 128x64)
+3. SSD1306 OLED driver (128x32, 128x64)
+4. ILI9341 TFT display
 
 #### Utilities
 1. Font designer for OLED based displays (pixel fonts)
