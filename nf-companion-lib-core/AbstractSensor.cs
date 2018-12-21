@@ -92,7 +92,7 @@ namespace nanoFramework.Companion
 
             _changeTracker = new Thread(() => {
                 int divs = (int)(ms / 1000);
-                int timeSlice = (ms > 1000) ? (int)Math.Ceiling(ms / 1000) : 0;
+                
                 while (_isTrackingChanges)
                 {
                     if (ms > 1000)
@@ -160,5 +160,6 @@ namespace nanoFramework.Companion
         /// </summary>
         public abstract void Reset();
         #endregion
+        
     }
 }

@@ -33,12 +33,13 @@ namespace nanoFramework.Companion.Samples
         /// </summary>
         public static void Main()
         {
+            Console.WriteLine("Starting samples...");
             /*
              * Uncomment the driver you want to test
              */
             //(new EEPROM_24LC256_Sample()).RunSample(); //EEPROM, 24LC256 based test
-            //(new HTU21D_Sample()).RunSample(); //Test HTU21D sensor driver
-            (new OLEDSSD1306_I2C_Sample()).RunSample(); //Test for 128 x 32 OLED I2C display
+            (new HTU21D_Sample()).RunSample(); //Test HTU21D sensor driver
+            //(new OLEDSSD1306_I2C_Sample()).RunSample(); //Test for 128 x 32 OLED I2C display
             //(new OLEDSSD1306_SPI_Sample()).RunSample(); //Test for 128 x 32 OLED SPI display
 
             //Alternative method to run all the tests
