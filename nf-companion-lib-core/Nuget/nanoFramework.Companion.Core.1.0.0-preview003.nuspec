@@ -5,7 +5,7 @@
     <version>1.0.0-preview003</version>
     <authors>Vishnu Sharma</authors>
     <owners>vishnusharma</owners>
-    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <license type="expression">MIT</license>
     <projectUrl>https://github.com/sharmavishnu/nf-companion/tree/master/nf-companion-lib-core</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/sharmavishnu/nf-companion/master/images/nf-companion-logo-64x64.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
