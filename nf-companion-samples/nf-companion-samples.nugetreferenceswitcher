@@ -1,3 +1,0 @@
-nf-companion-lib-core	../nf-companion-lib-core/nf-companion-lib-core.nfproj	../packages/nanoFramework.Companion.Core.1.0.0-preview001/lib/nanoFramework.Companion.Core.dll
-nf-companion-lib-drivers-memory	../nf-companion-lib-drivers-memory/nf-companion-lib-drivers-memory.nfproj	../packages/nanoFramework.Companion.Drivers.Memory.1.0.0-preview001/lib/nanoFramework.Companion.Drivers.Memory.dll
-nf-companion-lib-drivers-sensors	../nf-companion-lib-drivers-sensors/nf-companion-lib-drivers-sensors.nfproj	../packages/nanoFramework.Companion.Drivers.Sensors.1.0.0-preview001/lib/nanoFramework.Companion.Drivers.Sensors.dll
