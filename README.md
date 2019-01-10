@@ -7,7 +7,7 @@ This repository contains various libraries, tools and utilities with a permissiv
 [Library Class Documentation](https://sharmavishnu.github.io/index.html)
 
 #### Supported Drivers
-1. HTU21D Temperature/Humidity Sensor
+1. HTU21D, DS18B20 Temperature/Humidity Sensor
 2. 24LC256 EEPROM driver
 3. SSD1306 OLED driver (128x32, 128x64)
 4. ILI9341 TFT display
