@@ -16,8 +16,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 using System;
 using System.Threading;
 using nanoFramework.Companion.Samples.Display;
-//using nanoFramework.Companion.Samples.Memory;
-//using nanoFramework.Companion.Samples.Sensors;
+using nanoFramework.Companion.Samples.Memory;
+using nanoFramework.Companion.Samples.Sensors;
 using Windows.Devices.I2c;
 
 namespace nanoFramework.Companion.Samples
@@ -38,8 +38,9 @@ namespace nanoFramework.Companion.Samples
              */
             //(new EEPROM_24LC256_Sample()).RunSample(); //EEPROM, 24LC256 based test
             //(new HTU21D_Sample()).RunSample(); //Test HTU21D sensor driver
+            (new DS18B20_Sample()).RunSample(); //Test DS18B20 sensor driver
             //(new OLEDSSD1306_I2C_Sample()).RunSample(); //Test for 128 x 32 OLED display
-            (new ILI9341_SPI_Sample()).RunSample(); //Test for ILI9341 based TFT display
+            //(new ILI9341_SPI_Sample()).RunSample(); //Test for ILI9341 based TFT display
 
             //Alternative method to run all the tests
             //ISample[] drivers = { new EEPROM_24LC256_Sample(),  new HTU21D_Sample(), new OLEDSSD1306_I2C_Sample() };

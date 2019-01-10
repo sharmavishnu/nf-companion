@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>nanoFramework.Companion.Drivers.Memory</id>
+    <version>1.0.0-preview004</version>
+    <authors>Vishnu Sharma</authors>
+    <owners>vishnusharma</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/sharmavishnu/nf-companion/tree/master/nf-companion-lib-drivers-memory</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/sharmavishnu/nf-companion/master/images/nf-companion-logo-64x64.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      nanoFramework companion library memory drivers package. 
+      Contains drivers for popular memory chips used in embedded systems (e.g. EEPROM, SDCard)
+    </description>
+    <releaseNotes>4th preview release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>nanoFramework</tags>
+	  <packageTypes>
+        <packageType name="Dependency" />
+    </packageTypes>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="1.0.6-preview-021" />
+			<dependency id="nanoFramework.Windows.Devices.I2c" version="1.0.2-preview-026" />
+      <dependency id="nanoFramework.Companion.Core" version="1.0.0-preview003" />
+    </dependencies>
+  </metadata>
+  <files>
+  	<file src="../bin/release/nanoFramework.Companion.Drivers.Memory.dll" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Drivers.Memory.pdb" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Drivers.Memory.pdbx" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Drivers.Memory.pe" target="lib"/>
+  </files>
+</package>

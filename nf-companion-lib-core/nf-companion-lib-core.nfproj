@@ -30,6 +30,7 @@
     <Compile Include="Utils\NumberUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Nuget\nanoFramework.Companion.Core.1.0.0-preview004.nuspec" />
     <None Include="Nuget\nanoFramework.Companion.Core.1.0.0-preview001.nuspec" />
     <None Include="Nuget\nanoFramework.Companion.Core.1.0.0-preview003.nuspec" />
     <None Include="packages.config" />

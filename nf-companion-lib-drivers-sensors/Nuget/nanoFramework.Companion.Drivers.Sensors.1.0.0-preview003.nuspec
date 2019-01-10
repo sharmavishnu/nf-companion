@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>nanoFramework.Companion.Drivers.Sensors</id>
+    <version>1.0.0-preview003</version>
+    <authors>Vishnu Sharma</authors>
+    <owners>vishnusharma</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/sharmavishnu/nf-companion/tree/master/nf-companion-lib-drivers-memory</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/sharmavishnu/nf-companion/master/images/nf-companion-logo-64x64.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      nanoFramework companion library sensor drivers package. 
+      Contains drivers for popular sensors used in embedded systems (e.g. HTU21D,Light,Sound)
+    </description>
+    <releaseNotes>Third preview release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>nanoFramework</tags>
+	  <packageTypes>
+        <packageType name="Dependency" />
+    </packageTypes>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="1.0.6-preview-021" />
+      <dependency id="nanoFramework.System.Math" version="1.0.2-preview-015" />
+			<dependency id="nanoFramework.Windows.Devices.I2c" version="1.0.2-preview-026" />
+      <dependency id="nanoFramework.Companion.Core" version="1.0.0-preview003" />
+    </dependencies>
+  </metadata>
+  <files>
+  	<file src="../bin/release/nanoFramework.Companion.Drivers.Sensors.dll" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Drivers.Sensors.pdb" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Drivers.Sensors.pdbx" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Drivers.Sensors.pe" target="lib"/>
+  </files>
+</package>

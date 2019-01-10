@@ -6,7 +6,7 @@ SET NUGET_ROOT_VERSION=1.0.0
 SET NUGET_IS_PREVIEW=preview
 SET NUGET_BUILD_NUMBER=004
 
-SET NUGET_NAME=nanoFramework.Companion.Core.%NUGET_ROOT_VERSION%-%NUGET_IS_PREVIEW%%NUGET_BUILD_NUMBER%
+SET NUGET_NAME=nanoFramework.Companion.Drivers.Sensors.%NUGET_ROOT_VERSION%-%NUGET_IS_PREVIEW%%NUGET_BUILD_NUMBER%
 
 echo ********************************************************
 echo Building %NUGET_NAME%

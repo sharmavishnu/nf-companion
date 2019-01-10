@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>nanoFramework.Companion.Core</id>
+    <version>1.0.0-preview004</version>
+    <authors>Vishnu Sharma</authors>
+    <owners>vishnusharma</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/sharmavishnu/nf-companion/tree/master/nf-companion-lib-core</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/sharmavishnu/nf-companion/master/images/nf-companion-logo-64x64.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>nanoFramework companion library core package. Most other nanoFramework companion packages from me are dependent on this package</description>
+    <releaseNotes>4th preview release</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>nanoFramework</tags>
+	  <packageTypes>
+        <packageType name="Dependency" />
+    </packageTypes>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="1.1.0" />
+			<dependency id="nanoFramework.Windows.Devices.I2c" version="1.1.0" />
+      <dependency id="nanoFramework.Companion.Core" version="1.0.0-preview003" />
+    </dependencies>
+  </metadata>
+  <files>
+  	<file src="../bin/release/nanoFramework.Companion.Core.dll" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Core.pdb" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Core.pdbx" target="lib"/>
+	  <file src="../bin/release/nanoFramework.Companion.Core.pe" target="lib"/>
+  </files>
+</package>

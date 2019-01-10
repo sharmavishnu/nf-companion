@@ -175,7 +175,8 @@ namespace nanoFramework.Companion.Drivers.Sensors
             TemperatureInCelcius = ERROR_TEMPERATURE;
             RelativeHumidity = ERROR_HUMIDITY;
         }
-        #endregion
+
+        #endregion        
 
         #region Change tracking
         /// <summary>

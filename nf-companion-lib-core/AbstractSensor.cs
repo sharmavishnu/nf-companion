@@ -141,7 +141,26 @@ namespace nanoFramework.Companion
         }
         #endregion
 
-        #region Generic Sensor Methods
+        #region Calibration
+        /// <summary>
+        /// Apply calibration to the measured value..using 2-point calibration method
+        /// Apply calibration formula to readings...see https://learn.adafruit.com/calibrating-sensors/two-point-calibration
+        /// </summary>
+        /// <param name="rawLow">Raw value low</param>
+        /// <param name="rawRange">Raw value range</param>
+        /// <param name="refLow">Reference low</param>
+        /// <param name="refRange">Reference range</param>
+        /// <param name="measuredVal">Value to calibrate</param>
+        /// <returns>Calibrated value</returns>
+        public float Apply2PointCalibration(float rawLow, float rawRange, float refLow, float refRange, float measuredVal)
+        {
+            if (refRange == 0) throw new ArgumentException();
+            if (rawRange == 0) throw new ArgumentException();
+            return (((measuredVal - rawLow) * refRange) / rawRange) + refLow;
+        }
+        #endregion
+
+        #region Abstract Sensor Methods
         /// <summary>
         /// Initialize the sensor
         /// </summary>

@@ -60,6 +60,7 @@ namespace nanoFramework.Companion.Samples.Sensors
             Console.WriteLine("HTU21D Sensor reading in One-Shot-mode; T=" + htu.TemperatureInCelcius.ToString() + " C, RH%=" + htu.RelativeHumidity.ToString());
 
             //Poll-mode example...
+
             htu.Reset(); //reset to start from scratch
             htu.Initialize();
             htu.PrepareToRead();
@@ -90,6 +91,7 @@ namespace nanoFramework.Companion.Samples.Sensors
                 while(loopCount > 0)
                 {
                     Thread.Sleep(3000);//Just a wait in the sample to end sample gracefully
+                    loopCount--;
                 }
                 htu.EndTrackChanges();
             }
