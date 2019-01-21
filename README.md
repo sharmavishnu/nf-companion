@@ -11,6 +11,7 @@ This repository contains various libraries, tools and utilities with a permissiv
 2. 24LC256 EEPROM driver
 3. SSD1306 OLED driver (128x32, 128x64)
 4. ILI9341 TFT display
+5. Bmp280 pressure/temperature sensor
 
 #### Utilities
 1. Font designer for OLED based displays (pixel fonts)
